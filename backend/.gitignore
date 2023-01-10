@@ -25,3 +25,7 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
+
+# Je désignore le plugin et le theme
+!web/app/plugins/atelier-ls
+!web/app/themes/atelier-ls
