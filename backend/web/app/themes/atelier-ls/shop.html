@@ -20,6 +20,9 @@
 	<link rel="stylesheet" href="css/custom.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	<!-- Range Slider CSS -->
+	<link rel="stylesheet" href="css/components/ion.rangeslider.css" type="text/css" />
+
 	<!-- Specific Stylesheet -->
 	<link rel="stylesheet" href="css/colors.php?color=222222" type="text/css" /> <!-- Store Theme Color -->
 	<link rel="stylesheet" href="demos/store/css/fonts.css" type="text/css" /> <!-- Store Theme Font -->
@@ -206,13 +209,17 @@
 						<i class="icon-instagram text-white-50"></i>
 						<i class="icon-instagram"></i>
 					</a>
-					<a href="#" class="social-icon si-small si-borderless si-rounded si-facebook">
-						<i class="icon-facebook text-white-50"></i>
-						<i class="icon-facebook"></i>
-					</a>
 					<a href="#" class="social-icon si-small si-borderless si-rounded si-tiktok">
 						<i class="icon-tiktok text-white-50"></i>
 						<i class="icon-tiktok"></i>
+					</a>
+					<a href="#" class="social-icon si-small si-borderless si-rounded si-pinterest">
+						<i class="icon-pinterest text-white-50"></i>
+						<i class="icon-pinterest"></i>
+					</a>
+					<a href="#" class="social-icon si-small si-borderless si-rounded si-facebook">
+						<i class="icon-facebook text-white-50"></i>
+						<i class="icon-facebook"></i>
 					</a>
 				</div>
 
@@ -269,7 +276,7 @@
 					</div>
 				</div>
 
-				<div class="container-fluid">
+				<!--<div class="container-fluid">
 					<div class="row mt-2">
 						<div class="col-md-4 mb-5">
 							<div class="card cat-card rounded-0 border-0 dark" >
@@ -338,23 +345,28 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="clear"></div>
+				
 
 				<div class="container-fluid topmargin">
 					<div class="row">
 						<div class="col-md-2 sticky-sidebar-wrap">
-							<ul class="list-unstyled items-nav sticky-sidebar">
-								<li class="no-divider"><a href="#" class="text-dark fw-semibold">Nouveautés</a></li>
+							<ul class="list-unstyled items-nav sticky-sidebar shop-filter" data-container="#shop">
+								<li><a href="#" class="text-dark fw-semibold" data-filter="*">tous les articles</a></li>
+								<li class="no-divider"><a href="#" class="text-dark fw-semibold" data-filter=".sf-new">Nouvelles créations</a></li>
 								<li><hr></li>
-								<li><a href="#">Déco Murale</a></li>
-								<li><a href="#">Arts de la table</a></li>
-								<li><a href="#">Déco Enfants</li>
-								<li><a href="#">Luminaires</a></li>
-								<li><a href="#">Objets Déco</a></li>
-								<li><a href="#">Bougies</a></li>
+								<li><a href="#" data-filter=".sf-murale">Décoration murale</a></li>
+								<li><a href="#" data-filter=".sf-table">Arts de la table</a></li>
+								<li><a href="#" data-filter=".sf-luminaires">Luminaires</a></li>
+								<li><a href="#" data-filter=".sf-enfant">Décoration enfant</a></li>
+								<li><a href="#" data-filter=".sf-objet">Objets décoratifs</a></li>
+								<li><a href="#" data-filter=".sf-bougies">Bougies</a></li>
 							</ul>
+
+							<hr>
+
 						</div>
 
 						<div class="col-md-10">
@@ -362,27 +374,27 @@
 
 								<!-- Shop Item 1
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-new sf-enfant sf-murale sf-objet">
 									<div class="product">
 										<div class="product-image position-relative">
 											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
 												<div class="flexslider">
 													<div class="slider-wrap">
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/1-1.jpg" alt="Décoration de Noël"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/1-1.jpg" alt="Black Shoe"></a>
 														</div>
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/1-2.jpg" alt="Décoration de Noël"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/1-2.jpg" alt="Black Shoe"></a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Ajouter au panier</a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">Déco de Noël</a></h3>
-												<span><a href="#">Objets Déco</a></span>
+												<h3><a href="demo-store-product-single.html">petite décoration hivernal</a></h3>
+												<span><a href="#">Objets décoratifs</a></span>
 											</div>
 											<div class="product-price"><ins>$21.49</ins></div>
 										</div>
@@ -391,75 +403,75 @@
 
 								<!-- Shop Item 2
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-murale sf-objet">
 									<div class="product">
 										<div class="product-image position-relative">
 											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
 												<div class="flexslider">
 													<div class="slider-wrap">
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/2-1.jpg" alt="Décoration Murale en macramé"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/2-1.jpg" alt="Sports Shoe"></a>
 														</div>
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/2-2.jpg" alt="Décoration Murale en macramé"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/2-2.jpg" alt="Sports Shoe"></a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Ajouter au panier</a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">macramé</a></h3>
-												<span><a href="#">Déco murale</a></span>
+												<h3><a href="demo-store-product-single.html">Trucs stylé</a></h3>
+												<span><a href="#">Décoration murale</a></span>
 											</div>
-											<div class="product-price"><ins>$21.49</ins></div>
+											<div class="product-price"><ins>$33.49</ins></div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Shop Item 3
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-bougies sf-new">
 									<div class="product">
 										<div class="product-image position-relative">
 											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
 												<div class="flexslider">
 													<div class="slider-wrap">
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/3-1.jpg" alt="Bougies artisanales"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/3-1.jpg" alt="Jackets"></a>
 														</div>
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/3-2.jpg" alt="Bougies artisanales"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/3-2.jpg" alt="Jackets"></a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Ajouter au panier</a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">Jolies bougies</a></h3>
+												<h3><a href="demo-store-product-single.html">Bougie artisanale</a></h3>
 												<span><a href="#">Bougies</a></span>
 											</div>
-											<div class="product-price"><ins>$21.49</ins></div>
+											<div class="product-price"><ins>$51.49</ins></div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Shop Item 4
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-object sf-new">
 									<div class="product">
 										<div class="product-image position-relative">
 											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
 												<div class="flexslider">
 													<div class="slider-wrap">
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/4-1.jpg" alt="#"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/4-1.jpg" alt="T-shirt"></a>
 														</div>
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/4-2.jpg" alt="#"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/4-2.jpg" alt="T-shirt"></a>
 														</div>
 													</div>
 												</div>
@@ -469,26 +481,26 @@
 										<div class="product-desc">
 											<div class="product-title">
 												<h3><a href="demo-store-product-single.html">Truc classe</a></h3>
-												<span><a href="#">Objets déco</a></span>
+												<span><a href="#">Objets décoratifs</a></span>
 											</div>
-											<div class="product-price"><ins>$21.49</ins></div>
+											<div class="product-price"><ins>$17.49</ins></div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Shop Item 5
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-enfant>
 									<div class="product">
 										<div class="product-image position-relative">
 											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
 												<div class="flexslider">
 													<div class="slider-wrap">
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/5-1.jpg" alt="Automne"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/5-1.jpg" alt="T-Shirts"></a>
 														</div>
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/5-2.jpg" alt="Automne"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/5-2.jpg" alt="T-Shirts"></a>
 														</div>
 													</div>
 												</div>
@@ -497,66 +509,66 @@
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">Champignons</a></h3>
-												<span><a href="#">Déco enfants</a></span>
+												<h3><a href="demo-store-product-single.html">Champignons automnale</a></h3>
+												<span><a href="#">Décoration enfants</a></span>
 											</div>
-											<div class="product-price"><ins>$21.49</ins></div>
+											<div class="product-price"><ins>$11.49</ins></div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Shop Item 6
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-murale sf-new">
 									<div class="product">
 										<div class="product-image position-relative">
 											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
 												<div class="flexslider">
 													<div class="slider-wrap">
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/6-1.jpg" alt="étagères murale"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/6-1.jpg" alt="Shoes"></a>
 														</div>
 														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/6-2.jpg" alt="étagéres murale"></a>
+															<a href="demo-store-product-single.html"><img src="demos/store/images/product/6-2.jpg" alt="Shoes"></a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Ajouter au panier</a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">&#201tagères super cool</a></h3>
-												<span><a href="#">Déco murale</a></span>
+												<h3><a href="demo-store-product-single.html">Etagéres murale</a></h3>
+												<span><a href="#">Décoration murale</a></span>
 											</div>
-											<div class="product-price"><ins>$21.49</ins></div>
+											<div class="product-price"><ins>$29.49</ins></div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Shop Item 7
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-watches">
 									<div class="product">
 										<div class="product-image position-relative">
-											<div class="fslider" data-pagi="false" data-speed="400" data-pause="200000">
+											<div class="fslider" data-arrows="true" data-pagi="false" data-speed="400" data-pause="6000" data-thumbs="true">
 												<div class="flexslider">
 													<div class="slider-wrap">
-														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/7-1.jpg" alt="Morning Dew"></a>
+														<div class="slide" data-thumb="demos/store/images/men/items/1.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/1.jpg" alt="Watch"></a>
 														</div>
-														<div class="slide">
-															<a href="demo-store-product-single.html"><img src="demos/store/images/product/7-2.jpg" alt="Morning Dew"></a>
+														<div class="slide" data-thumb="demos/store/images/men/items/1-1.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/1-1.jpg" alt="Watch"></a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>AJouter au panier</a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">Tipi</a></h3>
-												<span><a href="#">Déco enfants</a></span>
+												<h3><a href="demo-store-product-single.html">Rounded Watch</a></h3>
+												<span><a href="#">Watches</a></span>
 											</div>
 											<div class="product-price"><ins>$78</ins></div>
 										</div>
@@ -565,38 +577,121 @@
 
 								<!-- Shop Item 8
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-jeans sf-new">
 									<div class="product">
 										<div class="product-image">
-											<a href="demo-store-product-single.html"><img src="demos/store/images/product/8-1.jpg" alt="Décoration murale"></a>
-											<a href="demo-store-product-single.html"><img src="demos/store/images/product/8-2.jpg" alt="Décoration murale"></a>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>ajouter au panier</a>
+											<a href="demo-store-product-single.html"><img src="demos/store/images/product/8-1.jpg" alt="Jeans"></a>
+											<a href="demo-store-product-single.html"><img src="demos/store/images/product/8-2.jpg" alt="Jeans"></a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">Des jolies lampes</a></h3>
-												<span><a href="#">Luminaires</a></span>
+												<h3><a href="demo-store-product-single.html">Navi Blue Jeans</a></h3>
+												<span><a href="#">Jeans</a></span>
 											</div>
-											<div class="product-price"><ins>$78</ins></div>
+											<div class="product-price"><ins>$69</ins></div>
 										</div>
 									</div>
 								</div>
 
 								<!-- Shop Item 9
 								============================================= -->
-								<div class="col-lg-4 col-md-6 mb-4">
+								<div class="col-lg-4 col-md-6 mb-4 sf-shorts sf-sportswear">
 									<div class="product">
 										<div class="product-image">
-											<a href="demo-store-product-single.html"><img src="demos/store/images/product/9-1.jpg" alt="Décoration murale"></a>
-											<a href="demo-store-product-single.html"><img src="demos/store/images/product/9-2.jpg" alt="Décoration murale"></a>
-											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>ajouter au panier</a>
+											<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/6.jpg" alt="Shorts"></a>
+											<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/6-1.jpg" alt="Shorts"></a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
 										</div>
 										<div class="product-desc">
 											<div class="product-title">
-												<h3><a href="demo-store-product-single.html">Déco murale</a></h3>
-												<span><a href="#">Déco murale</a></span>
+												<h3><a href="demo-store-product-single.html">Jogging Shorts</a></h3>
+												<span><a href="#">Shorts</a></span>
 											</div>
-											<div class="product-price"><ins>$78</ins></div>
+											<div class="product-price"><ins>$9.99</ins></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Shop Item 10
+								============================================= -->
+								<div class="col-lg-4 col-md-6 mb-4 sf-sweaters">
+									<div class="product">
+										<div class="product-image">
+											<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/3.jpg" alt="Sweaters"></a>
+											<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/3.jpg" alt="Sweaters"></a>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
+										</div>
+										<div class="product-desc">
+											<div class="product-title">
+												<h3><a href="demo-store-product-single.html">Woolen Sweaters</a></h3>
+												<span><a href="#">Sweaters</a></span>
+											</div>
+											<div class="product-price"><ins>$71</ins></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Shop Item 11
+								============================================= -->
+								<div class="col-lg-4 col-md-6 mb-4 sf-trousers sf-new">
+									<div class="product">
+										<div class="product-image">
+											<div class="fslider" data-arrows="false" data-pagi="false" data-speed="400" data-pause="6000" data-thumbs="true">
+												<div class="flexslider">
+													<div class="slider-wrap">
+														<div class="slide" data-thumb="demos/store/images/men/items/4.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/4.jpg" alt="Trouser"></a>
+														</div>
+														<div class="slide" data-thumb="demos/store/images/men/items/4-1.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/4-1.jpg" alt="Trouser"></a>
+														</div>
+														<div class="slide" data-thumb="demos/store/images/men/items/4-2.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/4-2.jpg" alt="Trouser"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
+										</div>
+										<div class="product-desc">
+											<div class="product-title">
+												<h3><a href="demo-store-product-single.html">Light Blue Trouser</a></h3>
+												<span><a href="#">Trouser</a></span>
+											</div>
+											<div class="product-price"><ins>$19.99</ins></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Shop Item 12
+								============================================= -->
+								<div class="col-lg-4 col-md-6 mb-4 sf-shorts sf-new">
+									<div class="product">
+										<div class="product-image">
+											<div class="fslider" data-arrows="false" data-pagi="false" data-speed="400" data-pause="6000" data-thumbs="true">
+												<div class="flexslider">
+													<div class="slider-wrap">
+														<div class="slide" data-thumb="demos/store/images/men/items/5.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/5.jpg" alt="Shorts"></a>
+														</div>
+														<div class="slide" data-thumb="demos/store/images/men/items/5-1.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/5-1.jpg" alt="Shorts"></a>
+														</div>
+														<div class="slide" data-thumb="demos/store/images/men/items/5-2.jpg">
+															<a href="demo-store-product-single.html"><img src="demos/store/images/men/items/5-2.jpg" alt="Shorts"></a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a href="#" class="cart-btn button button-white button-light"><i class="icon-line-plus"></i>Add to Cart</a>
+										</div>
+										<div class="product-desc">
+											<div class="product-title">
+												<h3><a href="demo-store-product-single.html">Shorts - Pack of 3</a></h3>
+												<span><a href="#">Shorts</a></span>
+											</div>
+											<div class="product-price"><ins>$99</ins></div>
 										</div>
 									</div>
 								</div>
@@ -741,6 +836,9 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 
+	<!-- Range Slider Plugin -->
+	<script src="js/components/rangeslider.min.js"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="js/functions.js"></script>
@@ -780,6 +878,70 @@
 			$("#modal-subscribe").addClass("fadeOutDown");
 			setTimeout(function() { $('#modal-subscribe').modal('hide'); }, 400);
 			$("#modal-subscribe").attr("displayed", "false");
+		});
+
+		var priceRangefrom = 0,
+			priceRangeto = 0,
+			$container = null;
+
+		jQuery(window).on( 'load', function(){
+
+			$container = $('#shop');
+
+			$container.isotope({ transitionDuration: '0.65s' });
+
+			$('.shop-filter a').click(function(){
+				$('.shop-filter li').removeClass('activeFilter');
+				$(this).parent('li').addClass('activeFilter');
+				var selector = $(this).attr('data-filter');
+				$container.isotope({ filter: selector });
+				return false;
+			});
+
+			$(window).resize(function() {
+				$container.isotope('layout');
+			});
+
+		});
+
+		jQuery(document).ready( function($){
+
+			$(".range_23").ionRangeSlider({
+				type: "double",
+				min: 9.99,
+				max: 99.99,
+				from: 9.99,
+				to: 99.99,
+				prefix: '$',
+				hide_min_max: true,
+				hide_from_to: false,
+				grid: false,
+				onStart: function (data) {
+					priceRangefrom = data.from;
+					priceRangeto = data.to;
+				},
+				onFinish: function (data) {
+					priceRangefrom = data.from;
+					priceRangeto = data.to;
+
+					$container.isotope({
+						filter: function() {
+
+							if( $(this).find('.product-price').find('ins').length > 0 ) {
+								var price = $(this).find('.product-price ins').text();
+							} else {
+								var price = $(this).find('.product-price').text();
+							}
+
+							priceNum = price.split("$");
+
+							return ( priceRangefrom <= priceNum[1] && priceRangeto >= priceNum[1] );
+						}
+					});
+
+				}
+			});
+
 		});
 
 	</script>
